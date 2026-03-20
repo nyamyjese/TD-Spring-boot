@@ -9,6 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+
 public class Student {
     private String references;
     private String firstName;
