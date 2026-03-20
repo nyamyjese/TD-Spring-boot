@@ -1,23 +1,18 @@
 package com.example.tdspringboot.controller;
 
 import com.example.tdspringboot.model.Student;
- td3
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
- main
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
- td3
- main
 public class StudentController {
     private List<Student> studentList = new ArrayList<>();
 
     @GetMapping("/welcome")
- td3
     public ResponseEntity<String> welcome(@RequestParam(name = "name" , required = false) String name){
         if(name == null || name.isEmpty()){
             return ResponseEntity
@@ -82,7 +77,6 @@ public class StudentController {
         }
         else {
             return "Format not supported";
- main
         }
     }
 }
