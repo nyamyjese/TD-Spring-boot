@@ -52,31 +52,6 @@ public class StudentController {
             return ResponseEntity.ok(studentList);
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-    public String welcome(@RequestParam String name){
-        return "Welcome" + name;
-    }
-
-    @PostMapping("/students")
-    private String addStudent(@RequestBody List<Student> students){
-        studentList.addAll(students);
-        String nm ="";
-        for(Student std:students){
-            nm = nm+std.getFirstName()+" ";
-        }
-        return nm;
-    }
-
-    @GetMapping("/students")
-    public String getStudents(@RequestHeader("Accept") String acceptHeader){
-        if("text/plain".equals(acceptHeader)){
-            String students ="";
-            for(Student std:studentList){
-                students = students + std.getFirstName()+" ";
-            }
-            return students;
-        }
-        else {
-            return "Format not supported";
         }
     }
 }
