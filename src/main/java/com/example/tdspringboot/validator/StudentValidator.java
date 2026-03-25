@@ -2,7 +2,9 @@ package com.example.tdspringboot.validator;
 
 import com.example.tdspringboot.exception.BadRequestException;
 import com.example.tdspringboot.model.Student;
+import org.springframework.stereotype.Component;
 
+@Component
 public class StudentValidator {
     public void validate (Student student) {
         if(student.getReference() == null || student.getReference().isBlank()) {
