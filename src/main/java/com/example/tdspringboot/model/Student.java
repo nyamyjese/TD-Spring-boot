@@ -11,8 +11,7 @@ import lombok.ToString;
 @ToString
 
 public class Student {
-    private String references;
+    private String reference;
     private String firstName;
     private String lastName;
-    private int age;
 }
